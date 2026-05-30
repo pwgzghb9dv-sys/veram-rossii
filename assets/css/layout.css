@@ -56,6 +56,19 @@
   color: var(--text-invert);
   text-shadow: 0 2px 24px rgba(3, 42, 66, 0.45);
 }
+.hero__credit {
+  position: absolute;
+  right: clamp(1.1rem, 5vw, 3rem);
+  bottom: 1.4rem;
+  z-index: 1;
+  max-width: 60%;
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  text-align: right;
+  color: rgba(240, 240, 220, 0.78);
+  text-shadow: 0 1px 8px rgba(3, 42, 66, 0.6);
+}
 .hero__eyebrow {
   color: var(--warm);
 }

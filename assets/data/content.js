@@ -8,7 +8,7 @@ const ICONS = {
   orthodox: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v20M7 7h10M5 12h14M9 17h6"/></svg>`,
   islam: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M16.5 4a8 8 0 1 0 0 16 6.5 6.5 0 1 1 0-16Z"/><path d="m19.5 8 .9 1.9 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2L16.6 10.2l2-.3.9-1.9Z"/></svg>`,
   buddhism: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6M5.6 5.6l4.2 4.2M14.2 14.2l4.2 4.2M18.4 5.6l-4.2 4.2M9.8 14.2l-4.2 4.2"/></svg>`,
-  judaism: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 3l3.5 6h-7L12 3Zm0 18l-3.5-6h7L12 21ZM4.5 7.5h15M4.5 16.5h15"/></svg>`,
+  judaism: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M12 2.5 20.66 17.5H3.34L12 2.5Z"/><path d="M12 21.5 3.34 6.5h17.32L12 21.5Z"/></svg>`,
 };
 
 const RELIGIONS = [

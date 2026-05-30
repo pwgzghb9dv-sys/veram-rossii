@@ -15,13 +15,17 @@
     const points = data.MAP_POINTS;
     const icons = data.ICONS || {};
 
+    // Ограничиваем карту территорией России
+    const RUSSIA_BOUNDS = L.latLngBounds([41, 19], [78, 180]);
     const map = L.map(el, {
-      center: [56, 70],
+      center: [62, 94],
       zoom: 3,
       minZoom: 2,
       maxZoom: 9,
       scrollWheelZoom: false,
       attributionControl: true,
+      maxBounds: RUSSIA_BOUNDS,
+      maxBoundsViscosity: 1.0,
     });
 
     // Включаем колесо после клика по карте (чтобы скролл страницы не залипал)
@@ -72,7 +76,9 @@
 
     function fit() {
       map.invalidateSize();
+      // Вид по маркерам (вся раскладка в пределах России), без выхода на мир
       if (bounds.length) map.fitBounds(bounds, { padding: [30, 30] });
+      else map.fitBounds(RUSSIA_BOUNDS, { padding: [8, 8] });
     }
 
     // Контейнер может быть ещё не до конца разложен на момент init —
