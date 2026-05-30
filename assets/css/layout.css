@@ -1,0 +1,251 @@
+/* ============================================================
+   layout.css — сетки, секции, раскладка, адаптив (mobile-first)
+   ============================================================ */
+
+/* --------- Шапка --------- */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  transition: background-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+.site-header.is-scrolled {
+  background-color: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* --------- Hero --------- */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 100svh;
+  padding-block: clamp(6rem, 14vh, 9rem) clamp(3rem, 9vh, 6rem);
+  overflow: hidden;
+  color: var(--text-invert);
+}
+.hero__bg {
+  position: absolute;
+  inset: -12% 0;
+  z-index: -2;
+}
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(3, 42, 66, 0.55) 0%, rgba(3, 42, 66, 0.5) 35%, rgba(3, 42, 66, 0.92) 100%),
+    linear-gradient(90deg, rgba(3, 42, 66, 0.55) 0%, rgba(3, 42, 66, 0) 60%);
+}
+.hero__content {
+  position: relative;
+}
+.hero__title {
+  color: var(--text-invert);
+  text-shadow: 0 2px 24px rgba(3, 42, 66, 0.45);
+}
+.hero__eyebrow {
+  color: var(--warm);
+}
+.hero__lead {
+  max-width: 46ch;
+  margin-top: 1.4rem;
+  font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+  color: rgba(240, 240, 220, 0.92);
+}
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2.2rem;
+}
+
+/* --------- Заголовок секции --------- */
+.section-head {
+  max-width: 62ch;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.section-head h2 {
+  margin-top: 0.6rem;
+}
+.section-head__lead {
+  margin-top: 1.1rem;
+  color: var(--text-soft);
+  font-size: clamp(1.02rem, 1.2vw, 1.2rem);
+}
+
+/* --------- Таймлайн --------- */
+.timeline {
+  position: relative;
+  display: grid;
+  gap: clamp(2rem, 5vw, 3.5rem);
+}
+.timeline__item {
+  display: grid;
+  gap: 1.25rem;
+}
+.timeline__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.timeline__media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* --------- Фичер «Храм всех религий» --------- */
+.feature {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.feature__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.feature__media img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.feature__body h3 {
+  margin-bottom: 1rem;
+}
+.feature__body p + p {
+  margin-top: 1rem;
+}
+
+/* --------- Примеры диалога --------- */
+.examples {
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: 1fr;
+}
+
+/* --------- Карта --------- */
+.map-wrap {
+  display: grid;
+  gap: 1.25rem;
+}
+.map {
+  width: 100%;
+  height: clamp(360px, 60vh, 560px);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  z-index: 0;
+}
+
+/* --------- Итог --------- */
+.conclusion p {
+  max-width: 60ch;
+  margin-inline: auto;
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+}
+.conclusion h2 {
+  margin-block: 0.8rem 1.6rem;
+}
+.conclusion p + p {
+  margin-top: 1.1rem;
+}
+
+/* --------- Footer --------- */
+.footer {
+  background-color: var(--accent);
+  color: var(--text-invert);
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+.footer__inner {
+  display: grid;
+  gap: 1.6rem;
+}
+.footer__brand .brand__text {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+.footer__brand p {
+  margin-top: 0.4rem;
+  color: rgba(240, 240, 220, 0.7);
+  font-size: var(--fs-small);
+}
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem 1.6rem;
+}
+.footer__nav a {
+  color: rgba(240, 240, 220, 0.85);
+  transition: color 0.2s var(--ease);
+}
+.footer__nav a:hover {
+  color: var(--warm);
+}
+
+/* ============================================================
+   Брейкпоинты
+   ============================================================ */
+@media (min-width: 700px) {
+  .examples {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__inner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .timeline {
+    margin-inline: auto;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--line);
+    transform: translateX(-50%);
+  }
+  .timeline__item {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: clamp(2rem, 4vw, 4rem);
+  }
+  .timeline__item:nth-child(even) .timeline__media {
+    order: 2;
+  }
+  .timeline__item:nth-child(even) .timeline__body {
+    order: 1;
+    text-align: right;
+  }
+  .feature {
+    grid-template-columns: 1.1fr 1fr;
+  }
+  .examples {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .hero__title {
+    max-width: 14ch;
+  }
+}

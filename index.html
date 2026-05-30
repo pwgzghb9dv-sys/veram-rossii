@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Многоликая вера России — религиозное многообразие страны</title>
+  <meta name="description" content="Православие, ислам, буддизм и иудаизм в России: история появления, повседневный уклад, межрелигиозный диалог и конфессиональная карта страны." />
+
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap&subset=cyrillic,cyrillic-ext,latin" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <!-- ======================= Навигация ======================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a class="brand" href="#hero">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Вера России</span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__toggle-bar"></span>
+          <span class="visually-hidden">Меню</span>
+        </button>
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="#history">История</a></li>
+          <li><a href="#daily">Повседневность</a></li>
+          <li><a href="#dialogue">Диалог</a></li>
+          <li><a href="#map">Карта</a></li>
+          <li><a class="nav__cta" href="o-proekte.html">О проекте</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ======================= Hero ======================= -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" data-parallax="0.25">
+        <img src="assets/img/hero.jpg" alt="" aria-hidden="true" fetchpriority="high" />
+      </div>
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="eyebrow hero__eyebrow" data-reveal>Православие · Ислам · Буддизм · Иудаизм</p>
+        <h1 class="hero__title" data-reveal>Многоликая вера<br />России</h1>
+        <p class="hero__lead" data-reveal>
+          Россия никогда не была страной одной веры. Веками здесь сталкивались,
+          переплетались и мирно уживались разные религиозные традиции — и в этом
+          разнообразии скрыта особая ценность.
+        </p>
+        <div class="hero__actions" data-reveal>
+          <a class="btn btn--primary" href="#history">Узнать историю</a>
+          <a class="btn btn--ghost" href="#map">Конфессиональная карта</a>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#history" aria-label="Прокрутить вниз">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ======================= История появления ======================= -->
+    <section class="section" id="history">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">Как это начиналось</p>
+          <h2>История появления</h2>
+          <p class="section-head__lead">
+            Ни одна из крупнейших религий не была принесена на штыках завоевателей.
+            Они приходили через торговые пути, личный выбор правителей, династические
+            браки и постепенное освоение новых земель.
+          </p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item" data-reveal>
+            <div class="timeline__media">
+              <img src="assets/img/orthodox.jpg" alt="Православный храм с золотыми куполами" loading="lazy" />
+            </div>
+            <div class="timeline__body">
+              <span class="timeline__date">988</span>
+              <h3 class="timeline__title">Православие</h3>
+              <p>
+                Отсчёт ведут с 988 года, когда князь Владимир Святославич принял
+                крещение по византийскому обряду. Крещение Руси стало не кровавой
+                реформой, а постепенным процессом: языческие капища соседствовали с
+                первыми церквями, а новые христианские смыслы накладывались на местные
+                обычаи.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <div class="timeline__media">
+              <img src="assets/img/islam.jpg" alt="Мечеть с минаретами" loading="lazy" />
+            </div>
+            <div class="timeline__body">
+              <span class="timeline__date">922 · 1552</span>
+              <h3 class="timeline__title">Ислам</h3>
+              <p>
+                Уже в VII–VIII веках арабские купцы достигали Волги и Каспия, а в 922
+                году волжские булгары приняли ислам как государственную религию. В
+                историю Российского государства ислам вошёл в 1552 году, когда Иван
+                Грозный взял Казань — и мусульманские народы навсегда вошли в состав
+                страны.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <div class="timeline__media">
+              <img src="assets/img/buddhism.jpg" alt="Буддийский дацан" loading="lazy" />
+            </div>
+            <div class="timeline__body">
+              <span class="timeline__date">XVII–XVIII · 1741</span>
+              <h3 class="timeline__title">Буддизм</h3>
+              <p>
+                Буддизм пришёл через кочевые народы — калмыков, бурят, тувинцев — из
+                Тибета и Монголии как естественная часть их культуры. В 1741 году
+                императрица Елизавета Петровна официально признала буддизм в Российской
+                империи: редкий для Европы XVIII века пример веротерпимости.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <div class="timeline__media">
+              <img src="assets/img/judaism.jpg" alt="Синагога" loading="lazy" />
+            </div>
+            <div class="timeline__body">
+              <span class="timeline__date">Конец XVIII</span>
+              <h3 class="timeline__title">Иудаизм</h3>
+              <p>
+                Массовое появление иудейских общин связано с разделами Речи Посполитой.
+                Внутри «черты оседлости» евреям официально разрешалось исповедовать
+                иудаизм, строить синагоги и соблюдать субботу. Позже многие иудеи внесли
+                огромный вклад в науку, культуру и экономику России.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ======================= Повседневная жизнь ======================= -->
+    <section class="section section--alt" id="daily">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">Уклад жизни</p>
+          <h2>Повседневная жизнь</h2>
+          <p class="section-head__lead">
+            Религии веками формировали уклад народов России. Даже далёкий от веры
+            человек невольно следует привычкам, которые оттачивались под её влиянием.
+          </p>
+        </header>
+
+        <!-- Табы рендерятся из content.js -->
+        <div class="tabs" id="dailyTabs" data-reveal>
+          <div class="tabs__list" role="tablist" aria-label="Темы повседневной жизни"></div>
+          <div class="tabs__panels"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= Межрелигиозный диалог ======================= -->
+    <section class="section" id="dialogue">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">Рядом, а не против</p>
+          <h2>Межрелигиозный диалог</h2>
+        </header>
+
+        <div class="feature" data-reveal>
+          <div class="feature__media">
+            <img src="assets/img/temple-all-religions.jpg" alt="Храм всех религий в посёлке Старое Аракчино под Казанью" loading="lazy" />
+          </div>
+          <div class="feature__body">
+            <h3>Храм всех религий</h3>
+            <p>
+              В посёлке Старое Аракчино под Казанью художник Ильдар Ханов построил
+              удивительное здание. Здесь нет богослужений — это архитектурная фантазия,
+              где на одной территории соседствуют православный купол, мусульманский
+              минарет, иудейская арка и буддийская пагода.
+            </p>
+            <p>
+              Ханов не пытался смешать религии в одну. Он показал, что их архитектура
+              может не враждовать, а дополнять друг друга, стоять рядом и радовать глаз.
+            </p>
+          </div>
+        </div>
+
+        <div class="examples" data-reveal>
+          <article class="example-card">
+            <h4>Татарские сёла</h4>
+            <p>Православные и мусульмане поздравляют друг друга с праздниками, делятся угощениями и помогают по хозяйству.</p>
+          </article>
+          <article class="example-card">
+            <h4>Бурятия</h4>
+            <p>Буддисты и православные вместе освящают воду на Крещение.</p>
+          </article>
+          <article class="example-card">
+            <h4>Дагестан</h4>
+            <p>На Ураза-байрам мусульмане поздравляют соседей-христиан, а на Пасху христиане приходят к мусульманам.</p>
+          </article>
+          <article class="example-card">
+            <h4>Межрелигиозный совет</h4>
+            <p>Лидеры четырёх религий собираются несколько раз в год, выпускают совместные заявления и проводят акции милосердия.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= Конфессиональная карта ======================= -->
+    <section class="section section--alt" id="map">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">Переплетение, а не границы</p>
+          <h2>Конфессиональная карта</h2>
+          <p class="section-head__lead">
+            Границы между верами здесь не жёсткие: даже там, где преобладает одна
+            религия, встречаются храмы, мечети и дацаны других. Карта показывает не
+            изоляцию, а результат многовекового соседства.
+          </p>
+        </header>
+
+        <div class="map-wrap" data-reveal>
+          <div id="confessionMap" class="map" role="application" aria-label="Интерактивная карта религиозных центров России"></div>
+          <ul class="map-legend" id="mapLegend" aria-hidden="true"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= Итог ======================= -->
+    <section class="section section--dark" id="conclusion">
+      <div class="container container--narrow conclusion" data-reveal>
+        <p class="eyebrow">Итог</p>
+        <h2>Вера может быть разной — это не повод для вражды</h2>
+        <p>
+          Россия — страна, где разные веры не просто уживаются, а создают общую
+          культуру, не теряя своей идентичности. Если присмотреться, у них много
+          общего: все религии учат добру, милосердию, честности и заботе о ближнем.
+        </p>
+        <p>
+          Именно в умении сохранять своё и при этом слышать другого проявляется
+          настоящая сила и зрелость общества.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= Footer ======================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__text">Многоликая вера России</span>
+        <p>Учебный проект о религиозном многообразии страны.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <a href="#history">История</a>
+        <a href="#daily">Повседневность</a>
+        <a href="#dialogue">Диалог</a>
+        <a href="#map">Карта</a>
+        <a href="o-proekte.html">О проекте</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ======================= Библиотеки (git, через CDN) ======================= -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <script src="assets/data/content.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/map.js"></script>
+</body>
+</html>
