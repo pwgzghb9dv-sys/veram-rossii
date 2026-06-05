@@ -367,6 +367,42 @@
   line-height: 1.5;
 }
 
+/* --------- Словарь терминов --------- */
+.glossary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: clamp(1rem, 2.5vw, 1.6rem);
+}
+.glossary__group {
+  padding: clamp(1.2rem, 2.5vw, 1.8rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+.glossary__title {
+  margin: 0 0 0.9rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--warm-deep);
+  font-size: 1.15rem;
+  color: var(--accent);
+}
+.glossary__list {
+  margin: 0;
+}
+.glossary__list dt {
+  font-weight: 600;
+  color: var(--text);
+}
+.glossary__list dd {
+  margin: 0.15rem 0 0.9rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+.glossary__list dd:last-child {
+  margin-bottom: 0;
+}
+
 /* --------- Reveal-анимации (включаются классом .js) --------- */
 .js [data-reveal] {
   opacity: 0;
