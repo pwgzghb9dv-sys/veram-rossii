@@ -23,7 +23,7 @@
       minZoom: 3,
       maxZoom: 9,
       scrollWheelZoom: false,
-      attributionControl: true,
+      attributionControl: false,
       maxBounds: RUSSIA_BOUNDS,
       maxBoundsViscosity: 1.0,
       worldCopyJump: false,
