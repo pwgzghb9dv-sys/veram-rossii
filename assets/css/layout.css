@@ -72,6 +72,9 @@
 .hero__eyebrow {
   color: var(--warm);
 }
+.hero__eyebrow::before {
+  background: var(--warm);
+}
 .hero__lead {
   max-width: 46ch;
   margin-top: 1.4rem;

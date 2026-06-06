@@ -205,6 +205,73 @@
         },
       });
     });
+
+    // Каскадное появление элементов в сетках
+    const staggerGroups = [
+      ".stats",
+      ".region-grid",
+      ".examples",
+      ".timeline",
+      ".glossary",
+    ];
+    staggerGroups.forEach((sel) => {
+      document.querySelectorAll(sel).forEach((group) => {
+        const items = Array.from(group.children);
+        if (!items.length) return;
+        gsap.set(items, { opacity: 0, y: 26 });
+        window.ScrollTrigger.create({
+          trigger: group,
+          start: "top 82%",
+          once: true,
+          onEnter: () =>
+            gsap.to(items, {
+              opacity: 1,
+              y: 0,
+              duration: 0.6,
+              ease: "power2.out",
+              stagger: 0.1,
+            }),
+        });
+      });
+    });
+  }
+
+  /* ---------- Анимированные счётчики (инфографика) ---------- */
+  function initCounters() {
+    const nums = document.querySelectorAll("[data-count]");
+    if (!nums.length) return;
+
+    const useGsap = !prefersReduced && typeof window.gsap !== "undefined";
+
+    nums.forEach((el) => {
+      const target = parseInt(el.getAttribute("data-count"), 10);
+      if (isNaN(target)) return;
+
+      if (!useGsap) {
+        el.textContent = String(target);
+        return;
+      }
+
+      const state = { value: 0 };
+      el.textContent = "0";
+      window.ScrollTrigger.create({
+        trigger: el,
+        start: "top 90%",
+        once: true,
+        onEnter: () =>
+          window.gsap.to(state, {
+            value: target,
+            duration: 1.4,
+            ease: "power2.out",
+            onUpdate: () => {
+              el.textContent = String(Math.round(state.value));
+            },
+            onComplete: () => {
+              el.textContent = String(target);
+            },
+          }),
+      });
+    });
   }
 
   /* ---------- Запуск ---------- */
@@ -213,5 +280,6 @@
     initLenis();
     initAnchors();
     initAnimations();
+    initCounters();
   });
 })();

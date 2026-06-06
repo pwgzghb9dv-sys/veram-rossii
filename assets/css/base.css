@@ -18,6 +18,13 @@
   --line: rgba(3, 42, 66, 0.14);   /* разделители */
   --line-strong: rgba(3, 42, 66, 0.28);
 
+  /* --- Цвета конфессий (для инфографики и карты) --- */
+  --c-orthodox: #1d4d6b;
+  --c-islam: #2f7d62;
+  --c-buddhism: #c08a3e;
+  --c-judaism: #3a5fb0;
+  --c-pagan: #6f8a4f;
+
   /* --- Типографика --- */
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -155,10 +162,19 @@ strong {
 .eyebrow {
   font-family: var(--font-body);
   font-size: var(--fs-eyebrow);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--warm-deep);
+  color: var(--accent);
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 1.6em;
+  height: 2px;
+  margin-right: 0.6em;
+  vertical-align: middle;
+  background: var(--accent);
 }
 
 /* ============================================================
@@ -191,6 +207,13 @@ strong {
 .section--dark h2,
 .section--dark h3 {
   color: var(--text-invert);
+}
+
+.section--dark .eyebrow {
+  color: var(--warm);
+}
+.section--dark .eyebrow::before {
+  background: var(--warm);
 }
 
 .visually-hidden {

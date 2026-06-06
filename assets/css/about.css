@@ -25,7 +25,7 @@
   font-size: var(--fs-h3);
   margin-bottom: 0.9rem;
   padding-bottom: 0.6rem;
-  border-bottom: 2px solid var(--warm-deep);
+  border-bottom: 2px solid var(--accent);
   display: inline-block;
 }
 .about-block p {
@@ -78,7 +78,7 @@
   left: 0;
   top: 0;
   font-weight: 600;
-  color: var(--warm-deep);
+  color: var(--accent);
 }
 
 .about-back {
@@ -105,7 +105,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--warm-deep);
+  background: var(--accent);
 }
 .team-member__contacts {
   display: flex;
@@ -124,5 +124,5 @@
   text-underline-offset: 3px;
 }
 .team-member__contacts a:hover {
-  color: var(--warm-deep);
+  color: var(--accent-soft);
 }
