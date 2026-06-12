@@ -78,10 +78,33 @@
         '<div class="map-popup__title">' +
           p.title +
           "</div>" +
+          (p.faiths
+            ? '<div class="map-popup__faiths">' + p.faiths + "</div>"
+            : "") +
+          (p.place
+            ? '<div class="map-popup__place">' + p.place + "</div>"
+            : "") +
           '<div class="map-popup__text">' +
           p.text +
-          "</div>"
+          "</div>",
+        {
+          maxWidth: 280,
+          minWidth: 220,
+          keepInView: true,
+          autoPan: true,
+          autoPanPadding: [40, 40],
+        }
       );
+
+      // Приближаем карту к точке при клике: рядом стоящие маркеры расходятся,
+      // а попап целиком помещается на экране. Перелёт без анимации, чтобы
+      // autoPan попапа не конфликтовал с движением карты.
+      marker.on("click", () => {
+        const targetZoom = Math.max(map.getZoom(), 6);
+        map.setView([p.lat, p.lng], targetZoom, { animate: false });
+        marker.openPopup();
+      });
+
       bounds.push([p.lat, p.lng]);
     });
 

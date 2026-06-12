@@ -14,9 +14,9 @@
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
-  <link rel="stylesheet" href="assets/css/base.css?v=20260606" />
-  <link rel="stylesheet" href="assets/css/layout.css?v=20260606" />
-  <link rel="stylesheet" href="assets/css/components.css?v=20260606" />
+  <link rel="stylesheet" href="assets/css/base.css?v=20260612" />
+  <link rel="stylesheet" href="assets/css/layout.css?v=20260612" />
+  <link rel="stylesheet" href="assets/css/components.css?v=20260612" />
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержанию</a>
@@ -63,7 +63,7 @@
         </p>
         <div class="hero__actions" data-reveal>
           <a class="btn btn--primary" href="#history">Узнать историю</a>
-          <a class="btn btn--ghost" href="#map">Конфессиональная карта</a>
+          <a class="btn btn--ghost" href="#map">Религиозные центры на карте</a>
         </div>
       </div>
       <p class="hero__credit">Храм всех религий, Старое Аракчино</p>
@@ -88,8 +88,21 @@
           инструментом объединения, освоения и даже разделения земель.
         </p>
       </div>
+    </section>
 
+    <!-- ======================= История появления ======================= -->
+    <section class="section" id="history">
       <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">Как это начиналось</p>
+          <h2>История появления</h2>
+          <p class="section-head__lead">
+            Ни одна из крупнейших религий не была принесена на штыках завоевателей.
+            Они приходили через торговые пути, личный выбор правителей, династические
+            браки и постепенное освоение новых земель.
+          </p>
+        </header>
+
         <ul class="stats" data-reveal aria-label="Ключевые даты появления религий">
           <li class="stat stat--orthodox">
             <span class="stat__num" data-count="988">988</span>
@@ -108,21 +121,6 @@
             <span class="stat__label">Иудейские общины и черта оседлости</span>
           </li>
         </ul>
-      </div>
-    </section>
-
-    <!-- ======================= История появления ======================= -->
-    <section class="section" id="history">
-      <div class="container">
-        <header class="section-head" data-reveal>
-          <p class="eyebrow">Как это начиналось</p>
-          <h2>История появления</h2>
-          <p class="section-head__lead">
-            Ни одна из крупнейших религий не была принесена на штыках завоевателей.
-            Они приходили через торговые пути, личный выбор правителей, династические
-            браки и постепенное освоение новых земель.
-          </p>
-        </header>
 
         <ol class="timeline">
           <li class="timeline__item" data-reveal>
@@ -267,44 +265,34 @@
       <div class="container">
         <header class="section-head" data-reveal>
           <p class="eyebrow">Переплетение, а не границы</p>
-          <h2>Конфессиональная карта</h2>
+          <h2>Религиозные центры России</h2>
           <p class="section-head__lead">
-            Границы между верами здесь не жёсткие: даже там, где преобладает одна
-            религия, встречаются храмы, мечети и дацаны других. Карта показывает не
-            изоляцию, а результат многовекового соседства.
+            На карте отмечены города со знаковыми святынями четырёх религий — от
+            Троице-Сергиевой лавры до Иволгинского дацана. Нажмите на точку, чтобы
+            узнать, какие веры представлены в городе и чем он знаменит.
           </p>
         </header>
 
-        <ul class="region-grid" data-reveal aria-label="Религии регионов России">
+        <ul class="region-grid" data-reveal aria-label="Где какая религия преобладает">
           <li class="region-card region-card--orthodox">
             <span class="region-card__tag">Православие</span>
             <h3 class="region-card__title">Центр, Северо-Запад, Сибирь, Дальний Восток</h3>
             <p>Главенствует православие — повсюду видны золотые купола.</p>
           </li>
           <li class="region-card region-card--islam">
-            <span class="region-card__tag">Ислам и православие</span>
-            <h3 class="region-card__title">Поволжье: Татарстан, Башкортостан</h3>
-            <p>Соседствуют на равных: в одном горизонте — и минареты, и купола.</p>
-          </li>
-          <li class="region-card region-card--islam">
             <span class="region-card__tag">Ислам</span>
-            <h3 class="region-card__title">Северный Кавказ</h3>
-            <p>Чечня, Дагестан, Ингушетия — минареты, а в горах сохранились древние христианские храмы.</p>
+            <h3 class="region-card__title">Поволжье и Северный Кавказ</h3>
+            <p>Татарстан, Башкортостан, Чечня, Дагестан, Ингушетия — города минаретов.</p>
           </li>
           <li class="region-card region-card--buddhism">
             <span class="region-card__tag">Буддизм</span>
             <h3 class="region-card__title">Бурятия, Тыва, Калмыкия</h3>
             <p>Родина российского буддизма — дацаны с пагодами и молитвенными барабанами.</p>
           </li>
-          <li class="region-card region-card--all">
-            <span class="region-card__tag">Все религии</span>
-            <h3 class="region-card__title">Москва, Петербург, Калининград</h3>
-            <p>В крупных городах есть и мечети, и синагоги, и католические костёлы.</p>
-          </li>
-          <li class="region-card region-card--pagan">
-            <span class="region-card__tag">Традиционные верования</span>
-            <h3 class="region-card__title">Марий Эл и отдалённая Сибирь</h3>
-            <p>Сохранились священные рощи и культовые места — наследие язычества.</p>
+          <li class="region-card region-card--judaism">
+            <span class="region-card__tag">Иудаизм</span>
+            <h3 class="region-card__title">Крупные города и Еврейская АО</h3>
+            <p>Синагоги Москвы и Петербурга, Биробиджан — центр Еврейской автономной области.</p>
           </li>
         </ul>
 
@@ -443,8 +431,8 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-  <script src="assets/data/content.js?v=20260606"></script>
-  <script src="assets/js/main.js?v=20260606"></script>
-  <script src="assets/js/map.js?v=20260606"></script>
+  <script src="assets/data/content.js?v=20260612"></script>
+  <script src="assets/js/main.js?v=20260612"></script>
+  <script src="assets/js/map.js?v=20260612"></script>
 </body>
 </html>

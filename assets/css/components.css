@@ -331,7 +331,7 @@
 .map-legend__icon--islam { background: var(--c-islam); }
 .map-legend__icon--buddhism { background: var(--c-buddhism); }
 .map-legend__icon--judaism { background: var(--c-judaism); }
-.map-legend__icon--pagan { background: var(--c-pagan); }
+.map-legend__icon--all { background: var(--accent); }
 .map-legend__icon svg {
   width: 15px;
   height: 15px;
@@ -371,8 +371,8 @@
 .map-marker--buddhism::after { border-color: var(--c-buddhism); }
 .map-marker--judaism { background: var(--c-judaism); }
 .map-marker--judaism::after { border-color: var(--c-judaism); }
-.map-marker--pagan { background: var(--c-pagan); }
-.map-marker--pagan::after { border-color: var(--c-pagan); }
+.map-marker--all { background: var(--accent); }
+.map-marker--all::after { border-color: var(--accent); }
 .map-marker svg {
   width: 17px;
   height: 17px;
@@ -410,6 +410,24 @@
   margin-bottom: 0.3rem;
   color: var(--accent);
 }
+.map-popup__faiths {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--text-invert);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.map-popup__place {
+  margin-bottom: 0.35rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text);
+}
 .map-popup__text {
   font-size: 0.9rem;
   color: var(--text-soft);
@@ -427,6 +445,7 @@
   margin-top: 1rem;
 }
 .stats {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
   gap: clamp(0.8rem, 2vw, 1.4rem);
@@ -489,8 +508,7 @@
 .region-card--orthodox { border-left-color: var(--c-orthodox); }
 .region-card--islam { border-left-color: var(--c-islam); }
 .region-card--buddhism { border-left-color: var(--c-buddhism); }
-.region-card--all { border-left-color: var(--accent); }
-.region-card--pagan { border-left-color: var(--c-pagan); }
+.region-card--judaism { border-left-color: var(--c-judaism); }
 .region-card__tag {
   display: inline-block;
   margin-bottom: 0.6rem;
@@ -506,8 +524,7 @@
 .region-card--orthodox .region-card__tag { background: var(--c-orthodox); }
 .region-card--islam .region-card__tag { background: var(--c-islam); }
 .region-card--buddhism .region-card__tag { background: var(--c-buddhism); }
-.region-card--all .region-card__tag { background: var(--accent); }
-.region-card--pagan .region-card__tag { background: var(--c-pagan); }
+.region-card--judaism .region-card__tag { background: var(--c-judaism); }
 .region-card__title {
   font-size: 1.05rem;
   margin-bottom: 0.45rem;
