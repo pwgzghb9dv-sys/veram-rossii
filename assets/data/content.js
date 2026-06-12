@@ -17,7 +17,6 @@ const RELIGIONS = [
   { id: "islam", name: "Ислам", icon: ICONS.islam },
   { id: "buddhism", name: "Буддизм", icon: ICONS.buddhism },
   { id: "judaism", name: "Иудаизм", icon: ICONS.judaism },
-  { id: "all", name: "Несколько религий рядом", icon: ICONS.all },
 ];
 
 /* Секция «Повседневная жизнь»: 3 темы × 4 конфессии */
